@@ -120,4 +120,3 @@ javascript:Android.getTime("ls; id; uname -a");
 ```
 
 
-تحب أعمله؟
